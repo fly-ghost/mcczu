@@ -50,7 +50,7 @@ class DepartmentPost(models.Model):
     department = models.ForeignKey(Department, on_delete=models.CASCADE, verbose_name="所属部门")
     owner = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="持有者")
     name = models.CharField(max_length=40, verbose_name="名称")
-    desc = models.CharField(max_length=200, verbose_name="文章摘要")
+    desc = models.CharField(max_length=200, blank=True, null=True, verbose_name="文章摘要")
     content = models.TextField(verbose_name="文章内容")
     status = models.PositiveIntegerField(default=STATUS_NORMAL, choices=STATUS_ITEMS, verbose_name="状态")
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
