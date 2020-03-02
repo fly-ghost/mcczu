@@ -47,7 +47,7 @@ class DepartmentPost(models.Model):
         (STATUS_HIDDEN, "隐藏")
     )
 
-    plate_category = models.ForeignKey(Department, on_delete=models.CASCADE, verbose_name="所属分类")
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, verbose_name="所属部门")
     owner = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="持有者")
     name = models.CharField(max_length=40, verbose_name="名称")
     desc = models.CharField(max_length=200, verbose_name="文章摘要")
@@ -61,7 +61,7 @@ class DepartmentPost(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = verbose_name_plural = "板块文章"
+        verbose_name = verbose_name_plural = "部门文章"
         ordering = ['-created_time']
 
     @classmethod

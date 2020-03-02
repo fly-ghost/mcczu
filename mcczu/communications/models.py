@@ -81,7 +81,7 @@ class PlatePost(models.Model):
         (STATUS_HIDDEN, "隐藏")
     )
 
-    plate_category = models.ForeignKey(PlateCategory, on_delete=models.CASCADE, verbose_name="所属分类")
+    category = models.ForeignKey(PlateCategory, on_delete=models.CASCADE, verbose_name="所属分类")
     owner = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="持有者")
     name = models.CharField(max_length=40, verbose_name="名称")
     desc = models.CharField(max_length=200, verbose_name="文章摘要")
