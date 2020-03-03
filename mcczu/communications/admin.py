@@ -16,7 +16,8 @@ class PlateAdmin(admin.ModelAdmin):
             'description': '板块基本内容',
             'fields': (
                 'name',
-                ('status', 'image'),
+                'status',
+                'image',
             ),
         }),
         ('可选内容', {
@@ -27,7 +28,8 @@ class PlateAdmin(admin.ModelAdmin):
         ('额外内容', {
             'classes': ('collapse', ),
             'fields': (
-                ('nop', 'noc'),
+                'nop',
+                'noc',
                 'weight',
             ),
         })
@@ -42,8 +44,10 @@ class PlateCategoryAdmin(admin.ModelAdmin):
         ('基本内容', {
             'description': '板块中分类的基本内容',
             'fields': (
-                ('plate', 'name'),
-                ('status', 'image'),
+                'plate',
+                'name',
+                'status',
+                'image',
             ),
         }),
         ('额外信息', {
@@ -77,7 +81,8 @@ class PlatePostAdmin(admin.ModelAdmin):
         ('基本内容', {
             'description': '板块中文章的基本内容',
             'fields': (
-                ('category', 'name'),
+                'category',
+                'name',
                 'status',
             ),
         }),
@@ -94,7 +99,8 @@ class PlatePostAdmin(admin.ModelAdmin):
         ('额外内容', {
             'classes': ('collapse', ),
             'fields': (
-                ('nov', 'noc'),
+                'nov',
+                'noc',
             ),
         })
     )

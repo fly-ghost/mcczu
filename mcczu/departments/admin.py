@@ -16,7 +16,8 @@ class DepartmentAdmin(admin.ModelAdmin):
             'description': '院系部门的基本内容',
             'fields': (
                 'name',
-                ('status', 'image'),
+                'status',
+                'image',
                 'is_main',
                 'created_time',
                 'desc',
@@ -54,7 +55,8 @@ class DepartmentPostAdmin(admin.ModelAdmin):
         ('基本内容', {
             'description': '院系部门中文章的基本内容',
             'fields': (
-                ('department', 'name'),
+                'department',
+                'name',
                 'status',
             ),
         }),
@@ -71,7 +73,8 @@ class DepartmentPostAdmin(admin.ModelAdmin):
         ('额外内容', {
             'classes': ('collapse',),
             'fields': (
-                ('nov', 'noc'),
+                'nov',
+                'noc',
             ),
         })
     )

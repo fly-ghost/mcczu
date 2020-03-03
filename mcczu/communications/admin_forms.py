@@ -2,7 +2,11 @@ from django import forms
 
 
 class PlateAdminForm(forms.ModelForm):
-    desc = forms.CharField(widget=forms.Textarea, label='简介', required=False)
+    desc = forms.CharField(
+        label='简介',
+        required=False,
+        widget=forms.Textarea,
+    )
 
 
 class PlatePostAdminForm(forms.ModelForm):
