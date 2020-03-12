@@ -1,10 +1,76 @@
-{% extends './base.html' %}
+<!DOCTYPE html>
 {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <div class="h_center" >
+        <img src=""  >
+        <p>为确保您的账户正常使用，依《网络安全法》相关要...................</p>
+    </div>
+</div>
+<!--中部-->
+<div id="login_body">
+    <div class="login_b_center">
+        <div class="login_bg"  >
+            <h4>密码登录</h4>
+            <form action="#" id="login">
 
-{% block title %}
-首页
-{% endblock %}
+                <!--用户名-->
+                <div class="userName">
+                    <span></span><input type="text" >
+                </div>
+                <!--密码-->
+                <div class="password">
+                    <span></span><input type="password" >
+                </div>
+                <!--登录按钮-->
+                <div class="login_btn">
+                    <input type="submit">
+                </div>
+                <div class="forgot_pwd">
+                    <a href="">忘记密码</a>
+                    <a href="">忘记会员名</a>
+                    <a href="">免费注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--尾部-->
+<div id="footer">
+    <div class="link" >
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
 
-{% block main %}
-<img style="margin-left:50%;" src="{% static 'index.gif' %}" alt="一只小恐龙"/>
-{% endblock %}
+
+    </div>
+    <div class="copyright">
+        Copyright 2018-2019
+    </div>
+</div>
+
+</body>
+</html>

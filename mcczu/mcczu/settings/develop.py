@@ -12,7 +12,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mcczu_db',
         'USER': 'root',
-        'PASSWORD': 'Jhr000430@',
+        'PASSWORD': '123',
         'HOST': '127.0.0.1',
         'PORT': 3306,
         'CONN_MAX_AGE': 5 * 60,
