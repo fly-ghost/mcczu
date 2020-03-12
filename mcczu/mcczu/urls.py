@@ -18,7 +18,9 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from overview.views import IndexView
+from overview.views import (
+    IndexView, RegisterView,
+)
 
 urlpatterns = [
     # admin
@@ -26,5 +28,7 @@ urlpatterns = [
 
     # index
     path('', IndexView.as_view(), name='index'),
+    # register
+    path('register', RegisterView.as_view(), name='register'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
