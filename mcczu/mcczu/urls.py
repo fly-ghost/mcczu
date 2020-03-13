@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from overview.views import (
-    IndexView, RegisterView,
+    IndexView, RegisterView, MainpageView
 )
 
 urlpatterns = [
@@ -30,5 +30,7 @@ urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     # register
     path('register', RegisterView.as_view(), name='register'),
+    # mainpage
+    path('mainpage', MainpageView.as_view(), name='mainpage'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

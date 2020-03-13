@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <!--顶部-->
+    <div class="header_top">
+        <div class="header_top_center">
+            <div class="h_top_left">
+                欢迎来到常大（暂定）
+            </div>
+            <div class="h_top_right">
+                <a href="{% url 'index' %}">登录</a>
+                <a href="{% url 'register' %}">免费注册</a>
+                <a href="#">注销账户</a>
+                <a href="#">个人中心</a>
+            </div>
+        </div>
+    </div>
+    <!--中部搜索-->
+    <div class="header_center">
+        <div class="h_c_logo">
+            <img src="{% static 'images/changda.jpg' %}">
+        </div>
+        <div class="h_c_search">
+            <form action="#">
+                <input type="text" placeholder="请输入一些内容..." class="t_input">
+                <input type="submit" class="t_button">
+            </form>
+            <div class="hot">
+                当前热搜：
+                <a href="#">表白墙信息</a>
+                <a href="#">常大交易</a>
+
+            </div>
+        </div>
+        <div class="h_c_code">
+            <img src="{% static 'images/userName_Icon.png' %}">
+        </div>
+    </div>
+    <!--导航-->
+    <div class="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">常大地图</a></li>
+            <li><a href="#">校园二手</a></li>
+            <li><a href="#">常大表白墙</a></li>
+        </ul>
+
+    </div>
+</div>
+<!--图片-->
+<div id="ad">
+    <img src="{% static 'images/celebrate.jpg' %}" >
+</div>
+
+<!--尾部-->
+<div id="footer">
+    <div class="link" >
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+        |
+        <a href="#">关于我们</a>
+
+
+    </div>
+    <div class="copyright">
+        Copyright 2018-2019
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

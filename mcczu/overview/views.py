@@ -9,3 +9,6 @@ class IndexView(TemplateView):
 
 class RegisterView(TemplateView):
     template_name = 'overview/regist.html'
+
+class MainpageView(TemplateView):
+    template_name = 'overview/mainpage.html'
